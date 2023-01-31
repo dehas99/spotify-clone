@@ -15,7 +15,6 @@ export default function Home() {
       <Button size="large" variant="contained">
         Hej spotify
       </Button>
-      Home
     </Box>
   );
 }
