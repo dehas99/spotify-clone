@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Grid } from "@mui/material";
 import { AccessTimeRounded } from "@mui/icons-material";
+import SongRow from "./SongRow";
 
 export default function SongTable() {
   return (
@@ -20,10 +21,15 @@ export default function SongTable() {
         <Grid item xs={3} sx={{ display: { xs: "none", md: "flex" } }}>
           Album
         </Grid>
-        <Grid item xs={3} sx={{}}>
+        <Grid item xs={3} sx={{ display: "flex", justifyContent: "flex-end" }}>
           <AccessTimeRounded sx={{ width: 20, height: 20 }} />
         </Grid>
       </Grid>
+      {Array(50)
+        .fill(0)
+        .map(() => (
+          <SongRow />
+        ))}
     </Box>
   );
 }

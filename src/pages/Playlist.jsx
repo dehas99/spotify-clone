@@ -10,6 +10,7 @@ export default function Playlist() {
         sx={{
           width: "100%",
           display: "flex",
+          background: "linear-gradient(#f0790070, #1211212)",
           justifyContent: "flex-starter",
           alignItems: "center",
           gap: 3,

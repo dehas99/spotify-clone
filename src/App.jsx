@@ -6,12 +6,13 @@ import Home from "./pages/Home";
 import Login from "./pages/login";
 import { getAccessToken } from "./utils/getAccessToken";
 import { getAccessTokenFromStorage } from "./utils/getAccessTokenFromStorage";
+import { useSelector } from "react-redux";
 
 function App() {
   const [token, setToken] = useState("");
 
   useEffect(() => {
-    let accessToken = getAccessTokenFromStorage || getAccessToken();
+    let accessToken = getAccessTokenFromStorage() || getAccessToken();
     if (accessToken) {
       sessionStorage.setItem("spotifyToken", accessToken);
       setToken(accessToken);
